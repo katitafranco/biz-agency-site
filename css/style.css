@@ -34,6 +34,7 @@ html {
 .navbar.change {
   height: 100vh;
 }
+
 @keyframes animarNavbar {
   0% {
     top: -8rem;
@@ -71,7 +72,8 @@ html {
   right: 4rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  /* space-evenly me ayudara a crear la forma de la flecha */
   cursor: pointer;
 }
 
@@ -91,6 +93,16 @@ html {
   margin-left: auto;
 }
 
+.change .line-1 {
+  transform: translate(100%, 1rem) rotate(-35deg);
+  transform-origin: right;
+}
+
+.change .line-3 {
+  transform: translateY(-1rem) rotate(35deg);
+  transform-origin: right;
+}
+
 .nav-list {
   /* valores para centrar los elementos */
   position: absolute;
@@ -102,9 +114,15 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 1;
-  /* visibility: hidden; */
+  opacity: 0;
+  visibility: hidden;
   transition: all 0.2s;
+}
+
+.change .nav-list {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.7s 0.5s;
 }
 
 .nav-link {
