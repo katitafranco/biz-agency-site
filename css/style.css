@@ -925,12 +925,10 @@ html {
   html {
     font-size: 30%;
   }
-
   .banner-heading span {
     font-size: 4.5rem;
     letter-spacing: 2rem;
   }
-
   /* Animación span headings */
   @keyframes animarEncabezado {
     0% {
@@ -963,15 +961,46 @@ html {
       letter-spacing: 2rem;
     }
   }
-
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4 {
+    height: 100vh;
+  }
+  .section-2 .section-heading {
+    margin-top: 10rem;
+  }
   .video-wrapper {
-    width: 60rem;
+    width: 50rem;
   }
 
   .section-2-paragraph {
-    width: 60rem;
+    width: 50rem;
   }
 
+  .pricing-cards-wrapper {
+    width: 70rem;
+    padding: 5rem 0 0 0;
+    display: grid;
+    grid-template-areas:
+      "card-f card-b"
+      "card-s card-d";
+  }
+  .pricing-card {
+    width: 33rem;
+  }
+  #card-free {
+    grid-area: card-f;
+  }
+  #card-basic {
+    grid-area: card-b;
+  }
+  #card-standard {
+    grid-area: card-s;
+  }
+  #card-diamante {
+    grid-area: card-d;
+  }
   .contact-details div {
     width: 18rem;
     margin: 3rem 1rem;
